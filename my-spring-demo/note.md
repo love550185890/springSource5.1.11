@@ -5,5 +5,6 @@ spring Bean生命周期是指：bean的创建、初始化、销毁等过程。
 需要注意的是单例的Bean生命周期是由容器管理的，非单例并不是由容器管理的
 
 ###spring的Bean生命周期的实现方式：
-*  > @Bean注解配合通过自定义initMethod和DestoryMethod配合注解使用；
-*  > Spring提供的接口:initializingBean(定义初始化逻辑)和DisposableBean(销毁逻辑)
+* >@Bean注解配合通过自定义initMethod和DestoryMethod配合注解使用；
+* >Spring提供的接口:initializingBean(定义初始化逻辑)和DisposableBean(销毁逻辑)
+* >JSR250规范中的注解:@PostConstruct(bean创建完并且属性赋值后调用)和@PreDestory(容器销毁Bean之前通知)
