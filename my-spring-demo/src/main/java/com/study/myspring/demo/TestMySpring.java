@@ -14,5 +14,7 @@ public class TestMySpring {
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(TestMySpring.class);
 		Blue blue = (Blue) context.getBean("blue");
+		context.close();
+
 	}
 }
