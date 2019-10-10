@@ -1,5 +1,6 @@
 package com.study.myspring.demo;
 
+import com.study.myspring.demo.aop.MathCalResult;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
@@ -13,8 +14,8 @@ public class TestMySpring {
 
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(TestMySpring.class);
-		Blue blue = (Blue) context.getBean("blue");
+		MathCalResult calResult = context.getBean(MathCalResult.class);
+		calResult.add(1,2);
 		context.close();
-
 	}
 }
